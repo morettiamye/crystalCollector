@@ -7,17 +7,45 @@
     <title>Crystal Collector</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet">
+    
 </head>
 <body>
     
-    <button id="button" type="button">Click Blue</button>
-    <button id="green" type="button">Click Green</button>
-    <button id="button" type="button">Click Purple</button>
-    <button id="button" type="button">Click White</button>
+    <div id="logo">
+       <h1>Collect Crystals!</h1>
+    </div>
+
+    <div id="rules">
+       <ul>
+        <li>Collect points to equal the number!</li>  
+        <li>When the you click on a crystal, it will add a specific amount of points to your total score.</li>
+        <li>Win by matching your score to the total shown on the screen.  Go over and you lose!</li>
+      </ul>
+    </div>
+
+    <div id="computerNumber"> 
+
+    </div>
 
 
+    <div id="container">
+    <img src="assets/images/bluegem.jpeg">
+    <img src="assets/images/greengem.jpeg">
+    <img src="assets/images/purplegem.jpeg">
+    <img src="assets/images/whitegem.jpeg">
+    </div>
 
+
+    <div id="score">
+
+    </div>
+
+    <footer id="wins">
+
+    </footer>
+
+<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='crossorigin='anonymous'></script>
     <script src="assets/javascript/game.js">
         window.onload = function() {
             //run js code here
