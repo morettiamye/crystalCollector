@@ -3,53 +3,74 @@ score = 0;
 wins = 0;
 losses = 0;
 
+
 // Random Number Pickins'
- var green = Math.floor((Math.random() * 12) + 1);
- var blue = Math.floor((Math.random() * 12) + 1);
- var purple = Math.floor((Math.random() * 12) + 1);
- var white = Math.floor((Math.random() * 12) + 1);
-
-//Green gem score
-
-function green() {
-    return score + green;
-}
+ var gCrystal = Math.floor((Math.random() * 12) + 1);
+ var bCrystal = Math.floor((Math.random() * 12) + 1);
+ var pCrystal = Math.floor((Math.random() * 12) + 1);
+ var wCrystal = Math.floor((Math.random() * 12) + 1);
 
 // Function to display random number and show it on screen
-var computer = Math.floor((Math.random() * 120) + 19);
+var computer = Math.floor((Math.random() * 101) + 19);
+$("#computerNumber").append(computer);
  
-
-
-// Functions for each crystal to randomly select number
-    // Green Crystal
-    function greenCrystal(){
-       $("green").on ("click", function green() {
-            console.log("Green clicked");
-        })
+// Function for determining if winning or losing
+function winning() {
+    if (score === computer ) {
+        console.log("You win!");
+        alert("You win!");
+        wins++;
+       $("#wins").html("<p>You've won</p>" + wins);
+       reset();
+    } else if (score > computer) {
+        console.log(score + "You lose");
+        alert("You lose!");
+        losses++;   
+        $("#losses").html("<p>You've lost :(</p>" + losses);
+        reset();
     }
+}
 
-    // //Blue Crystal
-    // function blueCrystal(){
-        
-    // }
+// Functions for each crystal to add random number to score
+$("#gCrystal").click(function add() {
+    score = score += gCrystal;
+    $("#score").html(score);
+    console.log(score);
+    winning();
+})   
 
-    // //Purple Crystal
-    // function purpleCrystal(){
-        
-    // }
+$("#bCrystal").click(function add() {
+    score = score += bCrystal;
+    $("#score").html(score);
+    console.log(score);
+    winning();
+})   
 
-    // //White Crystal
-    // function whiteCrystal(){
-        
+$("#pCrystal").click(function add() {
+    score = score += pCrystal;
+    $("#score").html(score);
+    console.log(pCrystal);
+    winning();
+})   
 
-    // }
-
-
-
-// Function for determining score vs randomly selected number
+$("#wCrystal").click(function add() {
+    score = score += wCrystal;
+    $("#score").html(score);
+    console.log(wCrystal);
+    winning();
+})   
 
 
 // Game Restart Function
 
+function reset() {
+score = 0;
+$("#score").html(" ");
+gCrystal = Math.floor((Math.random() * 12) + 1);
+bCrystal = Math.floor((Math.random() * 12) + 1);
+pCrystal = Math.floor((Math.random() * 12) + 1);
+wCrystal = Math.floor((Math.random() * 12) + 1);
+computer = Math.floor((Math.random() * 101) + 19);
+$("#computerNumber").html("<p>Try to tie:</p>" + computer);
+}
 
-// Show wins and losses

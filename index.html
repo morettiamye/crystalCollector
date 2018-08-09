@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Pacifico" rel="stylesheet">
     
 </head>
 <body>
@@ -23,27 +24,25 @@
         <li>Win by matching your score to the total shown on the screen.  Go over and you lose!</li>
       </ul>
     </div>
+    
+    <div id="container">
+    <img id="bCrystal" src="assets/images/bluegem.jpeg">
+    <img id="gCrystal" src="assets/images/greengem.jpeg">
+    <img id="pCrystal" src="assets/images/purplegem.jpeg">
+    <img id="wCrystal" src="assets/images/whitegem.jpeg">
+    </div>
 
     <div id="computerNumber"> 
+            Try to tie:
+        </div>
+    
+        <div id="score"></div> 
 
-    </div>
-
-
-    <div id="container">
-    <img src="assets/images/bluegem.jpeg">
-    <img src="assets/images/greengem.jpeg">
-    <img src="assets/images/purplegem.jpeg">
-    <img src="assets/images/whitegem.jpeg">
-    </div>
-
-
-    <div id="score">
-
-    </div>
-
-    <footer id="wins">
-
-    </footer>
+        <div class="clearfix">
+                <div class="clearfix"></div>
+            </div>
+    <div id="wins">You've won!</div>
+    <div id="losses">You've lost :(</div>
 
 <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='crossorigin='anonymous'></script>
     <script src="assets/javascript/game.js">
